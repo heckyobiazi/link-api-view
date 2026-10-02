@@ -1,43 +1,47 @@
+import { ArrowRight, ArrowUpRight, ArrowLeftRight, Check, ChevronRight, CircleHelp, Code2, Globe2, Layers3, LockKeyhole, Radio, Route, ShieldCheck, WalletCards, Webhook } from "lucide-react";
 import Image from "next/image";
+import linkLogo from "../assets/LINK_Logo_White.png";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
+
+
+const docs = "https://docs.linkio.world/docs/getting-started";
+const overview = "https://docs.linkio.world/docs/platform-overview";
+const onramp = "https://docs.linkio.world/docs/business-onramp";
+
+const request = `curl --request POST \\
+  --url https://api.linkio.world/otc/onramp \\
+  --header 'Content-Type: application/json' \\
+  --header 'ngnc-sec-key: <YOUR_SECRET_KEY>' \\
+  --data '{
+    "customer_id": "cut93498342",
+    "currency": "USD",
+    "amount": "25000",
+    "stables": "USDC",
+    "wallet_address": "0xYourBaseWallet",
+    "network": "BASE",
+    "paymentDetails": {
+      "accountNumber": "875104368977",
+      "routingNumber": "026073150",
+      "accountName": "Acme Corp"
+    }
+  }'`;
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
+    <main className="overflow-hidden">
+    <header className="relative z-10 border-b border-white/10 bg-black text-white backdrop-blur">
+      <div className="shell flex h-[76px] items-center justify-between">
+        <a href="#top" aria-label="LINK home" className="flex items-center gap-2.5">
+          <Image src={linkLogo} alt="" className="h-[22px] w-auto" priority />
+        </a>
+        <nav className="hidden items-center gap-8 text-[13px] font-medium text-[#626875] md:flex" aria-label="Main navigation">
+          <a href="#platform" className="transition hover:text-black">Platform</a><a href="#how-it-works" className="transition hover:text-black">How it works</a><a href="#quickstart" className="transition hover:text-black">Quickstart</a>
+        </nav>
+        <div className="flex items-center gap-3"><a className="hidden text-[13px] font-medium text-[#626875] transition hover:text-black sm:block" href={docs} target="_blank" rel="noreferrer">Documentation</a><a href="#quickstart" className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90">Start building <ArrowUpRight size={14} /></a></div>
+      </div>
+    </header>
+
+
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -45,13 +49,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
+            <Image className="dark:invert h-[14px] w-4" src="/vercel.svg" alt="Vercel logomark" width={16} height={14}/>
             Deploy Now
           </a>
           <a
@@ -64,6 +62,5 @@ export default function Home() {
           </a>
         </div>
       </main>
-    </div>
-  );
+  )
 }
