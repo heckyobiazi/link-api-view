@@ -70,7 +70,7 @@ export default function Home() {
   </div>
 </header>
 
- <section id="top" className="relative overflow-hidden border-b border-white/10 bg-black px-6 text-white sm:px-8 lg:px-12">
+ <section id="top" className="relative overflow-x-clip border-b border-white/10 bg-black px-6 text-white sm:px-8 lg:px-12">
    <div className="relative mx-auto flex min-h-[625px] w-full max-w-7xl flex-col items-center gap-12 py-16 lg:py-20">
         <div className="w-full max-w-[1200px] text-center">
           <div className="text-[16px] font-semibold text-[#ffffff]">FX infrastructure for modern payments</div>
@@ -118,14 +118,14 @@ export default function Home() {
     
 
       <section className="border-b border-white/10 bg-black text-white">
-      <div className="grid ml-[120px] w-full max-w-7xl grid-cols-1 divide-y divide-white/15 py-7 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 divide-y divide-white/15 px-6 py-7 text-center sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
         <div className="py-4 sm:px-8 sm:py-0 sm:first:pl-0"><div className="text-[31px] font-semibold tracking-[-.06em]">25<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currencies across Business API coverage</div></div>
         <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">400<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currency pairs across the LINK platform</div></div>
         <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">One<span className="text-[#0038ff]"> API</span></div><div className="mt-1 text-[12px] text-[#727885]">for ramp orchestration and settlement</div></div>
       </div>
     </section>
 
-    <section id="platform" className="relative overflow-hidden border-b border-white/10 bg-black px-6 text-white sm:px-8 lg:px-12">
+    <section id="platform" className="relative overflow-x-clip border-b border-white/10 bg-black px-6 text-white sm:px-8 lg:px-12">
       <div className="relative mx-auto flex min-h-[625px] w-full max-w-7xl flex-col items-center gap-12 py-16 lg:py-20">
         <div className="w-full max-w-[1200px] text-center">
           <div className="text-[16px] font-semibold text-[#ffffff]">The infrastructure layer</div>
@@ -144,7 +144,18 @@ export default function Home() {
         </div>
       </div>
     </section>
-
+  
+  <section className="relative overflow-hidden bg-[#111318] py-20 text-white sm:py-24">
+      <div className="absolute -right-24 -top-48 h-[470px] w-[470px] rounded-full border border-white/[.07]"/>
+      <div className="absolute -right-3 -top-28 h-[330px] w-[330px] rounded-full border border-white/[.07]"/><div className="absolute right-24 top-0 h-[180px] w-[180px] rounded-full bg-[#0038ff]/30 blur-[90px]"/>
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 px-6 md:grid-cols-[1fr_1fr]"><div>
+        <div className="ml-[5px] not-italic text-[16px] font-semibold text-[#b9fc6b]">What you can build</div>
+        <h2 className="max-w-[490px] text-[clamp(36px,4.4vw,55px)] font-semibold leading-[1.04] tracking-[-.06em]">Global money movement, inside your product.</h2><p className="mt-5 max-w-[460px] text-[14px] leading-7 text-white/55">Give users and businesses a simpler way to move between local currencies and digital dollars, with the flow shaped around your product.</p><Link href={overview} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 text-[13px] font-semibold text-[#b9fc6b] hover:text-white">See platform capabilities <ArrowUpRight size={15}/></Link></div>
+        <div className="grid grid-cols-2 gap-3">{[
+          { icon: WalletCards, title: "Stablecoin wallets", text: "Connect fiat funding and payouts." }, { icon: ArrowLeftRight, title: "On & off ramps", text: "Bridge fiat and USDC or USDT." }, { icon: Globe2, title: "Remittance flows", text: "Move value across markets." }, { icon: Layers3, title: "Global payroll", text: "Build settlement into a platform." },
+        ].map(({ icon: Icon, title, text }, i) => <div key={title} className={`rounded-[17px] border border-white/[.1] p-5 ${i === 0 ? "bg-[#1b1d24]" : "bg-white/[.035]"}`}><Icon size={19} className="text-[#9aa8ff]"/><h3 className="mt-7 text-[13px] font-semibold">{title}</h3><p className="mt-1.5 text-[11px] leading-5 text-white/45">{text}</p></div> )}</div>
+      </div>
+    </section>
 
 
       
