@@ -67,18 +67,20 @@ export default function Home() {
           <div className="mt-9 flex items-center justify-center gap-3 text-[12px] text-[#777d89]"><span className="flex -space-x-1.5"><i className="h-6 w-6 rounded-full border-2 border-white bg-[#0038ff]"/><i className="h-6 w-6 rounded-full border-2 border-white bg-[#ad91e9]"/><i className="h-6 w-6 rounded-full border-2 border-white bg-[#b9fc6b]"/></span><span>One integration. Multiple payment rails.</span></div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[540px]">
+        <div className="relative mx-auto w-full max-w-[940px]">
           <div className="absolute -inset-2 rounded-[28px] bg-[#0038ff]/15 blur-xl" />
           <div className="relative overflow-hidden rounded-[24px] bg-black p-5 shadow-lg sm:p-7">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-[11px] font-semibold uppercase tracking-[.11em] text-[#737989]">Payment orchestration</div>
-                <div className="mt-1 text-[17px] font-semibold tracking-[-.03em]">One connection. Two directions.</div></div><span className="grid h-9 w-9 place-items-center rounded-xl bg-[#f1f4ff] text-[#0038ff]"><ArrowLeftRight size={18}/></span></div>
-            <div className="relative mt-7 grid grid-cols-[1fr_90px_1fr] items-center gap-2 sm:grid-cols-[1fr_112px_1fr]">
-              <div className="rounded-2xl bg-[#fafbfc] p-4 text-[#111318]"><span className="grid h-10 w-10 place-items-center rounded-xl bg-white text-[#555d6c] shadow-sm"><Globe2 size={19}/></span><div className="mt-4 text-[12px] font-semibold">Local rails</div><div className="mt-1 text-[11px] text-[#7a808d]">Bank · wallet · payout</div></div>
-              <div className="relative flex flex-col items-center gap-2"><span className="absolute left-0 right-0 top-[20px] border-t border-dashed border-[#b6c2ff]"/><span className="z-[1] grid h-[42px] w-[42px] place-items-center rounded-full bg-white text-[#0038ff] shadow-sm"><ArrowLeftRight size={18}/></span><span className="z-[1] rounded-full bg-white px-1 text-[10px] font-semibold text-[#0038ff]">LINK API</span></div>
-              <div className="rounded-2xl bg-[#fafbfc] p-4 text-[#111318]"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[#e9edff] text-[#0038ff]"><Layers3 size={19}/></span><div className="mt-4 text-[12px] font-semibold">Digital dollars</div><div className="mt-1 text-[11px] text-[#7a808d]">USDC · USDT</div></div>
+                <div className="mt-1 text-[17px] font-semibold tracking-[-.03em]">One connection. Two directions.</div></div><span className="grid h-9 w-9 place-items-center text-[#0038ff]"><ArrowLeftRight size={23}/></span></div>
+            <div className="relative mt-7 grid grid-cols-[7rem_minmax(4rem,1fr)_7rem] items-center gap-2">
+              <div className="text-center"><span className="grid h-16 w-16 place-items-center text-[#0038ff] mx-auto"><Globe2 size={36} className="drop-shadow-md"/></span><div className="mt-4 text-[12px] font-semibold">Local rails</div><div className="mt-1 whitespace-nowrap text-[11px] text-[#7a808d]">Bank · wallet · payout</div></div>
+              <div className="relative flex flex-col items-center gap-2"><span className="absolute -left-6 -right-6 top-[20px] border-t-2 border-dashed border-[#0038ff]"/><span className="z-[1] grid h-[42px] w-[42px] place-items-center rounded-full bg-white text-[#0038ff] shadow-sm"><ArrowLeftRight size={18}/></span><span className="z-[1] px-1 text-[16px] font-semibold text-[#ffffff]">LINK API</span></div>
+              <div className="text-center"><span className="grid h-16 w-16 place-items-center text-[#0038ff] mx-auto"><Layers3 size={36} className="drop-shadow-md"/></span><div className="mt-4 text-[12px] font-semibold">Digital dollars</div><div className="mt-1 text-[11px] text-[#7a808d]">USDC · USDT</div></div>
             </div>
+            <br />
+            <br />
             <div className="mt-5 rounded-2xl bg-[#111318] p-4 text-white sm:p-5">
               <div className="flex items-center justify-between"><div className="flex items-center gap-2 text-[11px] text-white/55">
               <span className="h-1.5 w-1.5 rounded-full bg-[#b9fc6b]"/> TRANSACTION STATUS</div>
@@ -95,7 +97,8 @@ export default function Home() {
             </div>
             <div className="mt-4 flex items-center justify-between text-[10px] text-[#858b97]"><span className="flex items-center gap-1.5"><ShieldCheck size={13} className="text-[#0038ff]"/> Built-in orchestration</span></div>
           </div>
-          <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-4 py-3 shadow-lg sm:block"><div className="flex items-center gap-2 text-[11px] font-semibold"><span className="grid h-7 w-7 place-items-center rounded-lg bg-[#f3efff] text-[#8961df]"><Webhook size={14}/></span>Webhook delivered <Check size={13} className="text-[#38a665]"/></div><div className="ml-9 mt-0.5 text-[10px] text-[#818692]">transaction_status_updated</div></div>
+          <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-4 py-3 shadow-lg sm:block"><div className="flex items-center gap-2 text-[11px] font-semibold"><span className="grid h-7 w-7 place-items-center rounded-lg bg-[#f3efff] text-[#8961df]"><Webhook size={14}/></span>Webhook delivered <Check size={13} className="text-[#0038ff]"/></div><div className="ml-9 mt-0.5 text-[10px] text-[#818692]">transaction_status_updated</div></div>
+          <div className="absolute -bottom-5 -left-5 hidden rounded-2xl bg-white px-4 py-3 text-[#111318] shadow-lg sm:block"><div className="flex items-center gap-2 text-[11px] font-semibold"><span className="grid h-7 w-7 place-items-center rounded-lg bg-[#f3efff] text-[#8961df]"><Webhook size={14}/></span>Webhook delivered <Check size={13} className="text-[#38a665]"/></div><div className="ml-9 mt-0.5 text-[10px] text-[#818692]">transaction_status_updated</div></div>
         </div>
       </div>
     </section>
