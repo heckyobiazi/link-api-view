@@ -1,8 +1,11 @@
+"use client";
+
 import { ArrowRight, ArrowUpRight, ArrowLeftRight, Check, ChevronRight, CircleHelp, Code2, Globe2, Layers3, LockKeyhole, Radio, Route, ShieldCheck, WalletCards, Webhook } from "lucide-react";
 import Image from "next/image";
 import linkLogo from "../assets/LINK_Logo_White.png";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 const docs = "https://docs.linkio.world/docs/getting-started";
@@ -28,9 +31,19 @@ const request = `curl --request POST \\
   }'`;
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 880);
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
   return (
-    <main className="overflow-hidden">
-  <header className="static mt-4 border-b border-white/10 bg-black text-white">
+    <main>
+  <header className={`sticky top-0 z-50 border-b border-white/15 text-white shadow-lg shadow-black/20 backdrop-blur-xl ${isScrolled ? "bg-black/40" : "bg-black/90"}`}>
   <div className="shell flex h-[104px] items-center justify-between px-6">
     <Link href="#top" aria-label="LINK home" className="-ml-[-79px] flex items-center">
       <Image src={linkLogo} alt="LINK" className="h-8 w-auto" priority />
@@ -76,7 +89,7 @@ export default function Home() {
                 <div className="mt-1 text-[17px] font-semibold tracking-[-.03em]">One connection. Two directions.</div></div><span className="grid h-9 w-9 place-items-center text-[#0038ff]"><ArrowLeftRight size={23}/></span></div>
             <div className="relative mt-7 grid grid-cols-[7rem_minmax(4rem,1fr)_7rem] items-center gap-2">
               <div className="text-center"><span className="grid h-16 w-16 place-items-center text-[#0038ff] mx-auto"><Globe2 size={36} className="drop-shadow-md"/></span><div className="mt-4 text-[12px] font-semibold">Local rails</div><div className="mt-1 whitespace-nowrap text-[11px] text-[#7a808d]">Bank · wallet · payout</div></div>
-              <div className="relative flex flex-col items-center gap-2"><span className="absolute -left-6 -right-6 top-[20px] border-t-2 border-dashed border-[#0038ff]"/><span className="z-[1] grid h-[42px] w-[42px] place-items-center rounded-full bg-white text-[#0038ff] shadow-sm"><ArrowLeftRight size={18}/></span><span className="z-[1] px-1 text-[16px] font-semibold text-[#ffffff]">LINK API</span></div>
+              <div className="relative flex flex-col items-center gap-2"><span className="absolute -left-6 -right-6 top-[20px] h-0.5 bg-gradient-to-r from-white via-[#0038ff] to-white [mask-image:repeating-linear-gradient(to_right,#000_0_8px,transparent_8px_14px)] [-webkit-mask-image:repeating-linear-gradient(to_right,#000_0_8px,transparent_8px_14px)]"/><span className="z-[1] grid h-[42px] w-[42px] place-items-center rounded-full bg-white text-[#0038ff] shadow-sm"><ArrowLeftRight size={18}/></span><span className="z-[1] px-1 text-[16px] font-semibold text-[#ffffff]">LINK API</span></div>
               <div className="text-center"><span className="grid h-16 w-16 place-items-center text-[#0038ff] mx-auto"><Layers3 size={36} className="drop-shadow-md"/></span><div className="mt-4 text-[12px] font-semibold">Digital dollars</div><div className="mt-1 text-[11px] text-[#7a808d]">USDC · USDT</div></div>
             </div>
             <br />
@@ -102,6 +115,16 @@ export default function Home() {
         </div>
       </div>
     </section>
+    
+
+      <section className="border-b border-white/10 bg-black text-white">
+      <div className="shell grid ml-[100px] grid-cols-1 divide-y divide-white/15 py-7 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
+        <div className="py-4 sm:px-8 sm:py-0 sm:first:pl-0"><div className="text-[31px] font-semibold tracking-[-.06em]">25<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currencies across Business API coverage</div></div>
+        <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">400<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currency pairs across the LINK platform</div></div>
+        <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">One<span className="text-[#0038ff]"> API</span></div><div className="mt-1 text-[12px] text-[#727885]">for ramp orchestration and settlement</div></div>
+      </div>
+    </section>
+
 
 
       
