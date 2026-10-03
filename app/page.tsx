@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main>
   <header className={`sticky top-0 z-50 border-b border-white/15 text-white shadow-lg shadow-black/20 backdrop-blur-xl ${isScrolled ? "bg-black/40" : "bg-black/90"}`}>
-  <div className="shell flex h-[104px] items-center justify-between px-6">
+  <div className="mx-auto flex h-[104px] w-full max-w-7xl items-center justify-between px-6">
     <Link href="#top" aria-label="LINK home" className="-ml-[-79px] flex items-center">
       <Image src={linkLogo} alt="LINK" className="h-8 w-auto" priority />
     </Link>
@@ -118,10 +118,30 @@ export default function Home() {
     
 
       <section className="border-b border-white/10 bg-black text-white">
-      <div className="shell grid ml-[100px] grid-cols-1 divide-y divide-white/15 py-7 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
+      <div className="grid ml-[120px] w-full max-w-7xl grid-cols-1 divide-y divide-white/15 py-7 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
         <div className="py-4 sm:px-8 sm:py-0 sm:first:pl-0"><div className="text-[31px] font-semibold tracking-[-.06em]">25<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currencies across Business API coverage</div></div>
         <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">400<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currency pairs across the LINK platform</div></div>
         <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">One<span className="text-[#0038ff]"> API</span></div><div className="mt-1 text-[12px] text-[#727885]">for ramp orchestration and settlement</div></div>
+      </div>
+    </section>
+
+    <section id="platform" className="relative overflow-hidden border-b border-white/10 bg-black px-6 text-white sm:px-8 lg:px-12">
+      <div className="relative mx-auto flex min-h-[625px] w-full max-w-7xl flex-col items-center gap-12 py-16 lg:py-20">
+        <div className="w-full max-w-[1200px] text-center">
+          <div className="text-[16px] font-semibold text-[#ffffff]">The infrastructure layer</div>
+          <h3 className="text-[clamp(40px,6.2vw,76px)] font-semibold leading-[.99] tracking-[-.07em] text-white">Build the payment experience. Skip the plumbing.</h3>
+          <p className="mx-auto mt-6 max-w-[875px] text-[16px] leading-7 text-[#656b78]">Going global means dealing with local payment methods, conversion, compliance and status tracking. LINK brings those moving pieces into one integration your team can build around.</p>
+          </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {[
+            { icon: Route, n: "01", title: "One integration, many rails", copy: "Connect bank transfers and stablecoin wallets through a unified API, instead of maintaining a different integration for every market." },
+            { icon: ShieldCheck, n: "02", title: "Complexity handled upstream", copy: "LINK provides FX and stablecoin payment infrastructure, with onboarding and compliance tools built into the platform." },
+            { icon: Radio, n: "03", title: "Know what happens next", copy: "Track transactions by reference and use webhook events to keep customers and internal systems up to date." },
+          ].map(({ icon: Icon, n, title, copy }) => <article key={n} className="group rounded-[20px] border border-[#0038ff] bg-black p-6 transition duration-300 hover:-translate-y-1 hover:shadow-md shadow-blue-500 sm:p-7">
+            <div className="flex items-start justify-between"><span className="grid h-10 w-10 place-items-center text-[#0038ff]"><Icon size={19}/></span><span className="text-[11px] font-medium text-[#b1b5bf]"></span></div>
+            <h3 className="mt-9 text-[19px] font-semibold tracking-[-.035em]">{title}</h3><p className="mt-3 text-[13px] leading-6 text-[#747a87]">{copy}</p>
+            <div className="mt-2 shadow-sm shadow-blue-500"/></article>)}
+        </div>
       </div>
     </section>
 
