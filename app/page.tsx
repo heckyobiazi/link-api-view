@@ -173,10 +173,17 @@ export default function Home() {
           <div className="ml-[5px] not-italic text-[16px] font-semibold text-[#0038ff] justify-center mb-5">A clear path to your first flow</div>
       <h2 className="text-[clamp(36px,4.4vw,55px)] text-white font-semibold leading-[1.04] tracking-[-.06em]">From API key to transaction event.</h2>
       <p className="mt-5 text-[14px] leading-6 text-white/55">A familiar developer journey, with LINK coordinating the payment rails behind the scenes.</p></div>
-        <div className="relative mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">{flow.map(({ number, title, copy, icon: Icon }, i) => <article key={number} className="relative rounded-[17px] border border-white/[.1] bg-[#1b1d24] p-5">
-          <div className="flex items-center justify-between"><span className="grid h-9 w-9 place-items-center rounded-xl bg-[#242834] text-[#0038ff]"><Icon size={16}/></span><span className="text-[10px] font-semibold tracking-[.1em] text-white/45">{number}</span></div><h3 className="mt-6 text-[14px] font-semibold text-white">{title}</h3><p className="mt-2 text-[11px] leading-[1.7] text-white/45">{copy}</p>{i < flow.length - 1 && <ChevronRight className="absolute -right-[11px] top-1/2 z-[1] hidden -translate-y-1/2 rounded-full bg-[#1b1d24] text-white/45 lg:block" size={20}/>}</article>)}</div>
+        <div className="relative mt-14 mx-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">{flow.map(({ number, title, copy, icon: Icon }, i) => <article key={number} className="relative rounded-[17px] border border-white/[.1] bg-[#1b1d24] p-5">
+          <div className="flex items-center justify-between"><span className="grid h-9 w-9 place-items-center text-[#ffffff]"><Icon size={16}/></span>
+          <span className="text-[10px] font-semibold tracking-[.1em] text-white/45"></span></div>
+          <h3 className="mt-6 text-[14px] font-semibold text-white">{title}</h3>
+          <p className="mt-2 text-[11px] leading-[1.7] text-white/45">{copy}</p>{i < flow.length - 1 && <ChevronRight className="absolute -right-[16px] top-1/2 z-[1] hidden -translate-y-1/2 rounded-full bg-[#0038ff] text-white/45 lg:block" size={20}/>}</article>)}</div>
       </div>
     </section>
+
+    
+
+
     
       
       </main>
