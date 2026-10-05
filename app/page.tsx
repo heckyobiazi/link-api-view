@@ -7,6 +7,7 @@ import type { AnchorHTMLAttributes, ReactNode } from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CopyButton } from "@/components/copy-button";
+import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 
 
 const docs = "https://docs.linkio.world/docs/getting-started";
@@ -79,7 +80,7 @@ export default function Home() {
   </div>
 </header>
 
- <section id="top" className="relative overflow-x-clip border-b border-white/10 bg-black px-6 py-18 text-white sm:px-8 sm:py-24 lg:px-12">
+ <section id="top" className="relative overflow-x-clip border-b border-white/10 bg-black px-6  text-white sm:px-8  lg:px-12">
    <div className="relative mx-auto flex min-h-[625px] w-full max-w-7xl flex-col items-center gap-12 py-16 lg:py-20">
         <div className="w-full max-w-[1200px] text-center">
           <div className="text-[16px] font-semibold text-[#ffffff]">FX infrastructure for modern payments</div>
@@ -126,7 +127,7 @@ export default function Home() {
     </section>
     
 
-      <section className="border-b border-white/10 bg-black text-white py-18 sm:py-24">
+      <section className="border-b border-white/10 bg-black text-white ">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 divide-y divide-white/15 px-6 py-7 text-center sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:py-8">
         <div className="py-4 sm:px-8 sm:py-0 sm:first:pl-0"><div className="text-[31px] font-semibold tracking-[-.06em]">25<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currencies across Business API coverage</div></div>
         <div className="py-4 sm:px-8 sm:py-0"><div className="text-[31px] font-semibold tracking-[-.06em]">400<span className="text-[#0038ff]">+</span></div><div className="mt-1 text-[12px] text-[#727885]">currency pairs across the LINK platform</div></div>
@@ -183,7 +184,7 @@ export default function Home() {
       </div>
     </section>
 
-      <section id="quickstart" className="bg-black py-18 sm:py-24">
+      <section id="quickstart" className="bg-black ">
       <div className="shell">
         <div className="mx-auto max-w-[630px] text-center">
         <div className="text-[16px] font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#0038ff] to-[#ffffff] justify-center mb-5">Quickstart</div>
@@ -228,6 +229,60 @@ export default function Home() {
    <Link href="mailto:partnerships@linkio.africa" target="_blank" rel="noreferrer" className="inline-flex h-9 items-center mt-2gap-2 rounded-full bg-[#0038ff] px-8 text-xs font-semibold text-white hover:bg-[#002ed6]">Contact Us <ArrowUpRight size={15}/></Link>
   </div>
   </section>
+
+ <footer className="bg-black text-white">
+   <div className="mx-auto grid w-full max-w-[1000px] grid-cols-2 justify-items-center gap-x-8 gap-y-10 px-5 py-12 text-center sm:px-8 lg:grid-cols-4 lg:py-16">
+    <div className="col-span-1 w-fit">
+      <Link href="#top" aria-label="LINK home">
+        <Image src={linkLogo} alt="LINK" className="h-12 w-auto" />
+      </Link>
+
+      <div className="mt-6 flex gap-10">
+        <Link href="https://x.com/" aria-label="X" target="_blank" rel="noreferrer" className="grid h-[20px] w-[20px] place-items-center rounded-2xl bg-[#15161b] text-2xl transition hover:bg-[#0038ff]">
+          <FaXTwitter size={27} />
+        </Link>
+
+        <Link href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="grid h-[20px] w-[20px] place-items-center rounded-2xl bg-[#15161b] transition hover:bg-[#0038ff]">
+          <FaLinkedinIn size={27} />
+        </Link>
+
+        <Link href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" className="grid h-[20px] w-[20px] place-items-center rounded-2xl bg-[#15161b] transition hover:bg-[#0038ff]">
+          <FaInstagram size={27} />
+        </Link>
+      </div>
+    </div>
+
+    <nav aria-label="Quick Links">
+      <h2 className="mb-8 text-[18px] font-medium text-white/55">Quick Links</h2>
+      <ul className="space-y-5 text-[15px]">
+        <li><Link className="hover:text-[#0038ff]" href="#top">Home</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="#about">About Us</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="#faq">FAQ &amp; Help Center</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="mailto:engineering@linkio.africa">Contact Support</Link></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Products">
+      <h2 className="mb-8 text-[18px] font-medium text-white/55">Products</h2>
+      <ul className="space-y-5 text-[15px]">
+        <li><Link className="hover:text-[#0038ff]" href={onramp}>API Integration</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="#treasury">Treasury Platform</Link></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Resources">
+      <h2 className="mb-8 text-[18px] font-medium text-white/55">Resources</h2>
+      <ul className="space-y-5 text-[15px]">
+        <li>
+          <Link className="hover:text-[#0038ff]" href={docs} target="_blank" rel="noreferrer">
+            Developer Docs
+          </Link>
+        </li>
+        <li><Link className="hover:text-[#0038ff]" href="https://link-design.notion.site/LINK-brand-kit-21fa748dbad98019ac54d77e51792a0c" target="_blank" rel="noreferrer"> Brand Kit </Link></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
 
     
       
