@@ -225,7 +225,7 @@ export default function Home() {
       <div className="text-[16px] font-semibold uppercase tracking-[.13em] text-white/75">Your next global flow</div>
       <h2 className="mt-3 text-[clamp(20px,4vw,35px)] font-semibold leading-tight tracking-[-.055em]">Make money movement part of your product.</h2>
       </div>
-   <Link href="mailto:partnerships@linkio.africa" target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-[#0038ff] px-4 text-xs font-semibold text-white hover:bg-[#002ed6]">Contact Us <ArrowUpRight size={15}/></Link>
+   <Link href="mailto:partnerships@linkio.africa" target="_blank" rel="noreferrer" className="inline-flex h-9 items-center mt-2gap-2 rounded-full bg-[#0038ff] px-8 text-xs font-semibold text-white hover:bg-[#002ed6]">Contact Us <ArrowUpRight size={15}/></Link>
   </div>
   </section>
 
