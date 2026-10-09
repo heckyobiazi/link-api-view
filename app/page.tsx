@@ -67,13 +67,13 @@ export default function Home() {
         Products
         <span aria-hidden="true" className="text-base leading-none"></span>
       </Link>
-      <Link href="#how-it-works" className="transition hover:text-white/70">
+      <Link href="https://www.linkio.world/about" className="transition hover:text-white/70">
         About Us
       </Link>
     </nav>
 
     <Link
-      href="#quickstart"
+      href="https://www.linkio.world/get-started"
       className="mr-16 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700">
       Get Started
     </Link>
@@ -208,9 +208,10 @@ export default function Home() {
             <span className="mt-0.5 grid h-[17px] w-[17px] shrink-0 place-items-center text-[#0038ff]">
             <Check size={11} strokeWidth={3}/></span>{item}</li>)}</ul>
             <div className="mt-auto pt-7">
-              <div className="mb-3 h-px bg-[#eceef2]"/>
+              <div className="flex items-center gap-4 mb-3 h-px bg-[#eceef2] "/>
             <Link href="https://app.linkio.world" target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-[#0038ff] px-4 text-xs font-semibold text-white hover:bg-[#002ed6]">Open developer dashboard <ArrowUpRight size={13}/></Link>
-            <Link href={onramp} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-[#0038ff] px-4 text-xs font-semibold text-white hover:bg-[#002ed6]">Read endpoint guide <ArrowUpRight size={13}/></Link></div>
+            <Link href={onramp} target="_blank" rel="noreferrer" className="inline-flex h-9 items-center gap-2 rounded-full bg-[#0038ff] px-4 text-xs font-semibold text-white hover:bg-[#002ed6]">Read endpoint guide <ArrowUpRight size={13}/></Link>
+            </div>
             </div>
         </div>
         <div className="mt-5 mx-5 flex flex-col justify-between gap-4 rounded-[17px] border border-[#e6e9f0] bg-white px-5 py-4 sm:flex-row sm:items-center"><div className="flex items-start gap-3">
@@ -255,10 +256,10 @@ export default function Home() {
     <nav aria-label="Quick Links">
       <h2 className="mb-8 text-[18px] font-medium text-white/55">Quick Links</h2>
       <ul className="space-y-5 text-[15px]">
-        <li><Link className="hover:text-[#0038ff]" href="#top">Home</Link></li>
-        <li><Link className="hover:text-[#0038ff]" href="#about">About Us</Link></li>
-        <li><Link className="hover:text-[#0038ff]" href="#faq">FAQ &amp; Help Center</Link></li>
-        <li><Link className="hover:text-[#0038ff]" href="mailto:engineering@linkio.africa">Contact Support</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="https://www.linkio.world/">Home</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="https://www.linkio.world/about">About Us</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="https://www.linkio.world/help">FAQ &amp; Help Center</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="mailto:support@linkio.africa">Contact Support</Link></li>
       </ul>
     </nav>
 
@@ -266,7 +267,7 @@ export default function Home() {
       <h2 className="mb-8 text-[18px] font-medium text-white/55">Products</h2>
       <ul className="space-y-5 text-[15px]">
         <li><Link className="hover:text-[#0038ff]" href={onramp}>API Integration</Link></li>
-        <li><Link className="hover:text-[#0038ff]" href="#treasury">Treasury Platform</Link></li>
+        <li><Link className="hover:text-[#0038ff]" href="https://beta.linkio.world/">Treasury Platform</Link></li>
       </ul>
     </nav>
 
